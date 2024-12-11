@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+        function subtract(a, b) {
+            return a - b;
+        }
+        function multiply(a, b) {
+            return a * b;
+        }
+        function divide(a, b) {
+            if (b === 0) {
+                return "Cannot divide by zero";
+            }
+            return a / b;
+        }
+        // prompt the user for input
+        const number1 = prompt("Enter the first number:");
+        const number2 = prompt("Enter the second number:");
+
+        // perform the calculation based on the operator
+        const sum = parseFloat(number1) + parseFloat(number2);
+        const difference = parseFloat(number1) - parseFloat(number2);
+        const product = parseFloat(number1) * parseFloat(number2);
+        const quotient = parseFloat(number1) / parseFloat(number2);
+
+        // display the result based on the operator
+        alert(
+            `Results:Addition: ${sum}\nSubtraction: ${difference}\nMultiplication: ${product}\nDivision: ${quotient}`);
+    </script>
+</body>
+
+</html>
